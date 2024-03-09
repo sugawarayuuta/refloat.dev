@@ -125,7 +125,7 @@ Yay! Oh, one thing to note, we can only use integers in exponents. so...
 
 $$ m * 2^{\lfloor{e}\rfloor} = 2^e $$
 
-OK, it's not that difficult. Using ${{base}^{e_0} \over {base}^{e_1}} = {base}^{e_0 - e_1}$ after rearranging brings 
+OK, it's not that difficult. Using ${base}^{e_0} \over {base}^{e_1}$ being ${base}^{e_0 - e_1}$ after rearranging brings 
 
 $$ m = 2^{e - \lfloor{e}\rfloor} $$
 
@@ -190,6 +190,8 @@ Also, currently I'm rounding to the nearest exponent integer instead of flooring
 This method itself doesn't use lookup tables, at all, while the current `strconv` implementation uses a large table. In addition to that, it's able to calculate floats faster than the current `strconv` on most cases.
 
 Also, the functions follow the standard library closely, so for `ParseFlost` you can migrating by just changing the import statement. It passes standard libraries' tests too. The project is published on GitHub which is under BSD license.
+
+https://github.com/sugawarayuuta/refloat
 
 ## By the way...
 
